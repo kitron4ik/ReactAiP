@@ -1,217 +1,58 @@
 import React from 'react';
 
-/*function App() { //Упражнение 1-9
-  return <div>
-    Видоизмененный вид дива
-    <p class="p1">
-      Абзац 1
-    </p>
-    <p class="p2">
-      Абзац 2
-    </p>
-    <ul>
-      <li>
-        1
-      </li>
-      <li>
-        2
-      </li>
-      <li>
-        3
-      </li>
-      <li>
-        4
-      </li>
-      <li>
-        5
-      </li>
-      <li>
-        6
-      </li>
-      <li>
-        7
-      </li>
-      <li>
-        8
-      </li>
-      <li>
-        9
-      </li>
-      <li>
-        10
-      </li>
-    </ul>;
-  </div>;
-}*/
-/*function App() { //return нужно писать на одной строчке с тегом, который мы хотим вернуть
-  return <ul>
-    <li>text1</li>
-    <li>text2</li>
-    <li>text3</li>
-  </ul>;
-}*/
 /*function App() {
+  const isAdult = true;
+  let text;
+
+  if (isAdult) {
+    text = "Проходите вам есть 18"
+  } else
+    text = "Извините, но вам нет 18 лет"
   return <div>
-    <ul>
-      <li>text1</li>
-      <li>text2</li>
-      <li>text3</li>
-    </ul>
-    <ul>
-      <li>text1</li>
-      <li>text2</li>
-      <li>text3</li>
-    </ul>;
-    <input />;
+    {text}
   </div>
+
 }*/
 
 /*function App() {
-  return <input />;
+  const isAdmin = false;
+  if (isAdmin) {
+    return <div>
+      <p>Абзац</p>
+      <p>Абзац</p>
+      <p>Абзац</p>
+      <p>Абзац</p>
+      <p>Абзац</p>
+    </div>
+  } else
+    return
+
 }*/
 
+// ? = {}
+// : = else
+
 /*function App() {
-  const str1 = 'text1';
-  const str2 = 'text1';
+  const age = 19;
 
   return <div>
-    <p>{str1}</p>
-    <p>{str2}</p>
+    {age >= 18 ? <p>Проходите вы совершеннолетний</p> : <p>Вы не совершеннолетний выйдите отсюда</p>}
   </div>;
 }*/
 
 /*function App() {
-  const name = 'user';
-  const age = '30';
+  const isAuth = true;
 
   return <div>
-    name: {name}
-    age:  {age}
+    {isAuth && <p>вы авторизованы</p>}
   </div>;
 }*/
 
-/*function App() {
-  const arr = [1, 2, 3, 4, 5];
-  return <div>
-    <ul>
-      <li>{arr[0]}</li>
-      <li>{arr[1]}</li>
-      <li>{arr[2]}</li>
-      <li>{arr[3]}</li>
-      <li>{arr[4]}</li>
-    </ul>
-  </div>
-}*/
-
-/*function App() {
-  const obj = { name: 'john', surname: 'smit' };
-  return <div>
-    <p>{obj.name}</p>
-    <p>{obj.surname}</p>
-  </div>
-}*/
-
-/*function App() {
-  const attr = 'block';
-
-  return <div class={attr}>
-    Блок
-  </div>;
-}*/
-
-/*function App() {
-  const li1 = <li>text1</li>;
-  const li2 = <li>text2</li>;
-  const li3 = <li>text3</li>;
-
-  return <ul>
-    <li>{li1}</li>
-    <li>{li2}</li>
-    <li>{li3}</li>
-  </ul>
-}*/
-
-/*function App() {
-  const items = <ul><li>text1</li><li>text2</li><li>text3</li></ul>;
-
-  return <ul>
-    {items}
-  </ul>
-}*/
-
-/*function App() {
-  return <div>
-    1<input /><br />
-    2<input /><br />
-    3<input /><br />
-    4<input /><br />
-  </div>;
-}*/
-
-/*function App() {
-  return <div>
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-  </div>;
-}*/
-
-/*function App() {
-  return <table>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>4</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>16</td>
-        <td>36</td>
-      </tr>
-    </tbody>
-  </table>;
-}*/
-
-
-/*function App() { //В HTML коде покажется result: 9
-  const num1 = 3;
-  const num2 = 2;
+function App() {
+  const isAuth = false;
 
   return <div>
-    result: {num1 ** num2}
-  </div>;
-}*/
-
-/*function App() {  //result: john smit
-  const name = 'john';
-  const surname = 'smit';
-
-  return <div>
-    result: {name + ' ' + surname}
-  </div>;
-}*/
-
-function App() { //Покажется корень из 4-х, тоесть 2
-  const num = 4;
-
-  return <div>
-    result: {Math.sqrt(num)}
+    {!isAuth && <p>пожалуйста, авторизуйтесь</p>}
   </div>;
 }
-
 export default App;
