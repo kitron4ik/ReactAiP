@@ -1,58 +1,71 @@
 import React from 'react';
 
-/*function App() {
-  const isAdult = true;
-  let text;
 
-  if (isAdult) {
-    text = "Проходите вам есть 18"
-  } else
-    text = "Извините, но вам нет 18 лет"
+
+/*function App() {
+  function getDigitsSum(num) {
+    let sum = 0;
+    while (num) {
+      sum += num % 10;
+      num = Math.floor(num / 10);
+    }
+    return (sum)
+  }
+  const summa = getDigitsSum(123);
   return <div>
-    {text}
+    {summa}
   </div>
-
 }*/
 
 /*function App() {
-  const isAdmin = false;
-  if (isAdmin) {
-    return <div>
-      <p>Абзац</p>
-      <p>Абзац</p>
-      <p>Абзац</p>
-      <p>Абзац</p>
-      <p>Абзац</p>
-    </div>
-  } else
-    return
-
-}*/
-
-// ? = {}
-// : = else
-
-/*function App() {
-  const age = 19;
+  function getDigitsSum(num) {
+    let sum = 0;
+    while (num) {
+      sum += num % 10;
+      num = Math.floor(num / 10);
+    }
+    return (sum)
+  }
 
   return <div>
-    {age >= 18 ? <p>Проходите вы совершеннолетний</p> : <p>Вы не совершеннолетний выйдите отсюда</p>}
+    {getDigitsSum(12345)}
+  </div>
+}*/
+
+
+
+/*function App() {
+  function show1() {
+    alert(1);
+  }
+  function show2() {
+    alert(2);
+  }
+  return <div>
+    <button onClick={show1}>act1</button>
+    <button onClick={show2}>act2</button>
   </div>;
 }*/
 
 /*function App() {
-  const isAuth = true;
-
+  function showBtn(txt) {
+    alert(txt)
+  }
   return <div>
-    {isAuth && <p>вы авторизованы</p>}
+    <button onClick={() => showBtn(1)}>act1</button>
+    <button onClick={() => showBtn(2)}>act2</button>
+    <button onClick={() => showBtn(3)}>act3</button>
   </div>;
 }*/
 
 function App() {
-  const isAuth = false;
-
+  function func(arg, arg2, event) {
+    console.log(arg2, event, arg);
+  }
   return <div>
-    {!isAuth && <p>пожалуйста, авторизуйтесь</p>}
+    <button onClick={event => func('eee', event, 'kkk')}>параметр</button>
   </div>;
 }
+
+
 export default App;
