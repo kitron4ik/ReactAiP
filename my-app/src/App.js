@@ -1,71 +1,95 @@
 import React from 'react';
 
-
-
 /*function App() {
-  function getDigitsSum(num) {
-    let sum = 0;
-    while (num) {
-      sum += num % 10;
-      num = Math.floor(num / 10);
-    }
-    return (sum)
-  }
-  const summa = getDigitsSum(123);
-  return <div>
-    {summa}
-  </div>
+  const arr = [
+    <li>1</li>,
+    <li>2</li>,
+    <li>3</li>,
+    <li>4</li>,
+    <li>5</li>,
+  ];
+  return <ul>
+    {arr[0]}
+    {arr[1]}
+    {arr[2]}
+    {arr[3]}
+    {arr[4]}
+  </ul>
 }*/
 
 /*function App() {
-  function getDigitsSum(num) {
-    let sum = 0;
-    while (num) {
-      sum += num % 10;
-      num = Math.floor(num / 10);
-    }
-    return (sum)
+  const arr = [];
+
+  for (let i = 0; i < 5; i++) {
+    arr.push(<p>{i}</p>);
   }
 
   return <div>
-    {getDigitsSum(12345)}
-  </div>
-}*/
-
-
-
-/*function App() {
-  function show1() {
-    alert(1);
-  }
-  function show2() {
-    alert(2);
-  }
-  return <div>
-    <button onClick={show1}>act1</button>
-    <button onClick={show2}>act2</button>
+    {arr}
   </div>;
 }*/
 
 /*function App() {
-  function showBtn(txt) {
-    alert(txt)
-  }
+  const arr = ['a', 'b', 'c', 'd', 'e'];
+
+  const res = arr.map(function (item, index) {
+    return <p key={index}>{item}</p>;
+  });
+
   return <div>
-    <button onClick={() => showBtn(1)}>act1</button>
-    <button onClick={() => showBtn(2)}>act2</button>
-    <button onClick={() => showBtn(3)}>act3</button>
+    {res}
+  </div>;
+}*/
+
+/*function App() {
+  const users = [
+    { name: 'user1', surn: 'surn1', age: 30 },
+    { name: 'user2', surn: 'surn2', age: 31 },
+    { name: 'user3', surn: 'surn3', age: 32 },
+  ];
+
+  const res = users.map(function (item) {
+    return <p key={item.id}>
+      <span>{item.name} </span>:
+      <span>{item.surn} </span>
+      <span>{item.age} </span>
+    </p>;
+  });
+
+  return <div>
+    {res}
   </div>;
 }*/
 
 function App() {
-  function func(arg, arg2, event) {
-    console.log(arg2, event, arg);
-  }
-  return <div>
-    <button onClick={event => func('eee', event, 'kkk')}>параметр</button>
-  </div>;
-}
+  const users = [
+    { id: 1, name: 'user1', surn: 'surn1', age: 30 },
+    { id: 2, name: 'user2', surn: 'surn2', age: 31 },
+    { id: 3, name: 'user3', surn: 'surn3', age: 32 },
+  ];
 
+  const rows = users.map(function (item) {
+    return <tr key={item.id}>
+      <td>{item.id}</td>
+      <td>{item.name}</td>
+      <td>{item.surn}</td>
+      <td>{item.age}</td>
+    </tr>;
+  });
+
+  return <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Имя</td>
+        <td>Фамилия</td>
+        <td>Возраст</td>
+      </tr>
+    </thead>
+    <tbody>
+      {rows}
+    </tbody>
+  </table>;
+}
 
 export default App;
